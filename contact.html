@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<title>BELQ ENTERPRISE</title>
+</head>
+
+<body>
+<center>
+  <img src="logo transparent.png" width="400" height="150" alt="modular" usemap="#Modular">
+  <map name = "Modular">
+  <area shape = "rect" coords="0,0,558,204" href="homepage.html">
+  </map>
+
+<center>
+<div class="navbar">
+  <a href="homepage.html"> HOME </a>
+  
+  <div class="subnav">
+    <button class="subnavbtn">ABOUT US</button>
+    <div class= "subnav-content">
+      <a href = "companyhistory.html">COMPANY HISTORY</a>
+      <a href = "howWeWork.html">HOW WE WORK</a>
+    </div>
+   </div>
+ 
+	 <div class="subnav">
+	 <button class="subnavbtn">SERVICES</button>
+	 <div class= "subnav-content">
+	 <a href = "scope.html"> SCHEMATIC DESIGNS PHASE </a> <!-- SCOPE OF DESIGN -->
+	 <a href = "scope 2.html"> DESIGN DEVELOPMENT </a> <!-- SCOPE OF DESIGN -->
+	 </div>
+   </div>
+   
+  <div class="subnav">
+    <button class="subnavbtn"> PROJECTS </button>
+    <div class="subnav-content">
+      <a href = "kitchen.html">KITCHEN</a>
+      <a href = "bedroom.html">BEDROOM</a>
+      <a href = "vanity.html">VANITIES</a>
+      <a href = "entertainment.html">ENTERTAINMENT</a>
+    </div>
+  </div>
+  <div class="subnav">
+	<button class="subnavbtn">LAYOUTS</button>
+	<div class="subnav-content">
+		<a href = "2dlayouts.html">2D LAYOUTS</a>
+		<a href = "3dlayouts.html">3D LAYOUTS</a>
+	</div>
+  </div>
+  
+    <a style="float:right;" href="contact.html">CONTACT US</a>
+</div>
+</center>
+
+  <div class="slideshow-container">
+  
+    <div class="mySlides fade">
+	  <div class="container">
+	   <div class="numbertext"> 1 / 5 </div>
+		 <img src="kitchen header.png" class="responsive" alt="Kitchen Header">
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein we incorporate the BELQ standards: B-eauty, E-legance, L-ifestyle & Q-uality to your homes! </span> </p> </div>
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	   <div class="numbertext">2 / 5</div>
+         <img src="kitchen header 2.png" class="responsive" alt="reception header"> 
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> We specialize on building for our customers their ideal innovative designs and styles. </span> </p> </div>
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+	  <div class="container">
+       <div class="numbertext">3 / 5</div>
+        <img src="lavaratory header.png" class="responsive" alt="lavaratory header"> 
+         <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> From Office Interiors, Bedroom Interiors, Kitchen Interiors, Vanities and MORE!  </span> </p> </div>
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">4 / 5</div>
+          <img src="closet header.png" class="responsive" alt="closet header"> 
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Our primary programs usually involves in site production that emphasizes on the highest quality design. </span> </p> </div>
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">5 / 5</div>
+         <img src="reception header.png" class="responsive" alt="reception header">
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein we incorporate the BELQ standards: B-eauty, E-legance, L-ifestyle & Q-uality to your homes! </span> </p> </div> 
+		</div>
+	  </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</center> 
+
+<br>
+
+<section style="background-image: url('typing.gif'); background-repeat: no-repeat; background-size: cover; padding: 8%; ">
+<center>
+    <h1 style="color:#FFFFFF;"> CONTACT US </h1>
+	<p style="color:#FFFFFF;"> Have a Question for us? Fill up the form below, and we will try to get in touch with you. </p> <br>
+</center>
+
+	<form action="mailto:kreales29@gmail.com" class="was-validated" mailto>
+	  <div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" class="form-control" id="name" placeholder="Enter Name" size="65" name="name" required>
+	  
+		<label for="email">Email:</label>
+		<input type="text" class="form-control" id="email" placeholder="Enter Email" size="65" name="email" required>
+	  
+		<label for="comment">Comments:</label> <br>
+		<textarea class="form-control" rows="10" cols="50" id="comment" placeholder="Write something.."></textarea>
+	  </div>
+	  
+	  <br>
+	  <button type="submit" class="button1" style="width:20%; border:solid; margin-left:13%;"> Submit </button>
+	</form>
+
+</section>
+
+
+<br> <br> <br>
+<footer style="background-color: #000000;">
+
+	<div class="footer">
+		<p> Designed by: Carlos, Dela Cruz, Reales, Vergara <br> Copyright © 2020 </p>	
+	</div>
+</footer>
+
+
+</body>
+</html>
