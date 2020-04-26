@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<title>BELQ ENTERPRISE</title>
+</head>
+
+<body>
+<center>
+  <img src="logo transparent.png" width="400" height="150" alt="modular" usemap="#Modular">
+  <map name = "Modular">
+  <area shape = "rect" coords="0,0,558,204" href="homepage.html">
+  </map>
+
+<center>
+  <div class="navbar">
+    <a href="homepage.html"> HOME </a>
+    
+    <div class="subnav">
+      <button class="subnavbtn">ABOUT US</button>
+      <div class= "subnav-content">
+        <a href = "companyhistory.html">COMPANY HISTORY</a>
+      <a href = "work.html">HOW WE WORK</a>
+      </div>
+     </div>
+   
+    <div class="subnav">
+     <button class="subnavbtn">SERVICES</button>
+     <div class= "subnav-content">
+     <a href = "scope.html"> SCHEMATIC DESIGNS PHASE </a> <!-- SCOPE OF DESIGN -->
+     <a href = "scope.html"> DESIGN DEVELOPMENT </a> <!-- SCOPE OF DESIGN -->
+     </div>
+     </div>
+     
+    <div class="subnav">
+      <button class="subnavbtn"> PROJECTS </button>
+      <div class="subnav-content">
+        <a href = "kitchen.html">KITCHEN</a>
+        <a href = "bedroom.html">BEDROOM</a>
+        <a href = "vanity.html">VANITIES</a>
+        <a href = "entertainment.html">ENTERTAINMENT</a>
+      </div>
+    </div>
+    <div class="subnav">
+    <button class="subnavbtn">LAYOUTS</button>
+    <div class="subnav-content">
+      <a href = "2dlayouts.html">2D LAYOUTS</a>
+      <a href = "3dlayouts.html">3D LAYOUTS</a>
+    </div>
+    </div>
+      <a style="float:right;" href="contact.html">CONTACT US</a>
+  </div>
+</center>
+
+  <div class="slideshow-container">
+  
+    <div class="mySlides fade">
+	  <div class="container">
+	   <div class="numbertext"> 1 / 5 </div>
+		 <img src="kitchen header.png" class="responsive" alt="Kitchen Header">
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:100%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein BELQ stands for: B-eauty, E-legance, L-ifestyle & Q-uality </span> </p> </div> 
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	   <div class="numbertext">2 / 5</div>
+         <img src="kitchen header 2.png" class="responsive" alt="reception header"> 
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:100%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein BELQ stands for: B-eauty, E-legance, L-ifestyle & Q-uality </span> </p> </div> 
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+	  <div class="container">
+       <div class="numbertext">3 / 5</div>
+        <img src="lavaratory header.png" class="responsive" alt="lavaratory header"> 
+         <div class="overlay">
+		  <div class="text"> <p style="margin-left:100%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein BELQ stands for: B-eauty, E-legance, L-ifestyle & Q-uality </span> </p> </div> 
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">4 / 5</div>
+          <img src="closet header.png" class="responsive" alt="closet header"> 
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:100%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein BELQ stands for: B-eauty, E-legance, L-ifestyle & Q-uality </span> </p> </div> 
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">5 / 5</div>
+         <img src="reception header.png" class="responsive" alt="reception header">
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:100%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein BELQ stands for: B-eauty, E-legance, L-ifestyle & Q-uality </span> </p> </div> 
+		</div>
+	  </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</center>
+
+<center>
+<h1>HOW WE WORK</h1>
+</center>
+<center>
+  <br> <br> <br> <h2>VISION</h2> 
+  <p>To build a place where people can come and discover in maintaining a commitment, culture, and environment of self fulfillment in which we
+  can work as one.</p>
+
+  <br> <br> <br> <h2>MISSION</h2>
+  <p>To be a company that best understand customers with uniqueness of the product and services where satisfaction is our self-fulfillment.</p>
+</center>
+	<div class="Display">
+			<div class="dp"><img  src="planning.png" width="70" height="70" alt=""/></div>
+			<div class="dp"><img  src="conceptualizing.png" width="70" height="70" alt=""/></div>
+			<div class="dp"><img  src="design.png" width="70" height="70" alt=""/></div>
+			<div class="dp"><img  src="Output.png" width="70" height="70" alt=""/></div>
+
+			<div class="dp1">Planning</div>
+			<div class="dp1">Conceptualizing</div>
+			<div class="dp1">Implementing</div>
+			<div class="dp1">Output</div>
+</div>
+
+	<div class="dpmn">
+		   <div class="mainb"><img src="planning.png" width="100" height="100" alt=""/><caption>PLANNING</caption></div>
+		   <div class="mainm">1</div>
+		   <div class="mainp">We ensure our clients to provide efficient and highly effective designs for the needs of our client. To maintain our great reputation, BELQ MODULARS have a group of associates, all of which are contributing unique expertise to the architectural and interior design practice. These associates strive to develop unique support with each client based on open communication and personal commitment to the projects. This will thus improve our relationship to every clients and to acquire greater opportunity for both the company and costumer.</div>
+	</div>
+
+		<div class="dpmn">
+		   <div class="mainb"><img src="conceptualizing.png" width="100" height="100" alt=""/><caption id="conp">CONCEPTUALIZING</caption></div>
+		  <div class="mainm">2</div>
+		   <div class="mainp">Our professional practice centers on the exploration of innovative function and excellent service. We are strongly obligated to cooperate with our clients to provide the most satisfactory feedback given by the clients. We also welcome interior designers and architecture clients that is willing to cooperate with our company to create exclusive creations that is suited for them. With greater opportunities comes with possible innovations thus we will provide the highest quality design and costumer service reliability</div>
+		</div>
+
+		<div class="dpmn">
+		   <div class="mainb"><img src="design.png" width="100" height="100" alt=""/><caption>IMPLEMENTING</caption></div>
+		   <div class="mainm">3</div>
+		   <div class="mainp">After the approval for the proposed and concept design, we will now move to the implementing stage and ensure that our bought materials will be at the highest standard possible. We will also provide great flexibility during this process to ensure that the client is satisfied with the materials during the cooperation of materials that will be used. BELQ  will also ensure that no mishaps errors will happen and the materials will be installed at the exact and precised position. However if there is or are any scenario that will lead to a circumstance - our company will offer an appropriate compensation just in case.</div>
+		</div>
+
+		<div class="dpmn">
+		   <div class="mainb"><img src="Output.png" width="80" height="80" alt=""/><caption> OUTPUT</caption></div>
+	      <div class="mainm">4</div>
+		   <div class="mainp">We hope that our clients will be satisfied with our creations. We are hoping for a great feedback and please keep in touch with us when you have concerns regarding our services to improve our management furthermore. Furthermore our creations comes with 1-year warranty after installation as long as the reason is applicable for the warranty term.</div>
+		</div>
+	    <div class="imgp">
+			<div><img src="2D-3.jpg" width="500" height="450" alt=""/></div>
+			<div><img id="img1p" src="3D-3.jpg" width="580" height="450" alt=""/></div>
+	    </div>
+	
+<br> <br> <br> <br> 
+
+<footer style="background-color: #000000;">
+
+  <div class="footer">
+		<p> Designed by: Carlos, Dela Cruz, Reales, Vergara <br> Copyright © 2020 </p>	
+	</div>
+	
+</footer>
+	
+</body>
+</html>

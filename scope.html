@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<title>BELQ ENTERPRISE</title>
+</head>
+
+<body>
+<center>
+  <img src="logo transparent.png" width="400" height="150" alt="modular" usemap="#Modular">
+  <map name = "Modular">
+  <area shape = "rect" coords="0,0,558,204" href="homepage.html">
+  </map>
+
+<center>
+<div class="navbar">
+  <a href="homepage.html"> HOME </a>
+  
+  <div class="subnav">
+    <button class="subnavbtn">ABOUT US</button>
+    <div class= "subnav-content">
+      <a href = "companyhistory.html">COMPANY HISTORY</a>
+      <a href = "howWeWork.html">HOW WE WORK</a>
+    </div>
+   </div>
+ 
+	<div class="subnav">
+	 <button class="subnavbtn">SERVICES</button>
+	 <div class= "subnav-content">
+	 <a href = "scope.html"> SCHEMATIC DESIGNS PHASE </a> <!-- SCOPE OF DESIGN -->
+	 <a href = "scope 2.html"> DESIGN DEVELOPMENT </a> <!-- SCOPE OF DESIGN -->
+	 </div>
+   </div>
+   
+  <div class="subnav">
+    <button class="subnavbtn"> PROJECTS </button>
+    <div class="subnav-content">
+      <a href = "kitchen.html">KITCHEN</a>
+      <a href = "bedroom.html">BEDROOM</a>
+      <a href = "vanity.html">VANITIES</a>
+      <a href = "entertainment.html">ENTERTAINMENT</a>
+    </div>
+  </div>
+  <div class="subnav">
+	<button class="subnavbtn">LAYOUTS</button>
+	<div class="subnav-content">
+		<a href = "2dlayouts.html">2D LAYOUTS</a>
+		<a href = "3dlayouts.html">3D LAYOUTS</a>
+	</div>
+  </div>
+    <a style="float:right;" href="contact.html">CONTACT US</a>
+</div>
+</center>
+
+  <div class="slideshow-container">
+  
+    <div class="mySlides fade">
+	  <div class="container">
+	   <div class="numbertext"> 1 / 5 </div>
+		 <img src="kitchen header.png" class="responsive" alt="Kitchen Header">
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein we incorporate the BELQ standards: B-eauty, E-legance, L-ifestyle & Q-uality to your homes! </span> </p> </div>
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	   <div class="numbertext">2 / 5</div>
+         <img src="kitchen header 2.png" class="responsive" alt="reception header"> 
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> We specialize on building for our customers their ideal innovative designs and styles. </span> </p> </div>
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+	  <div class="container">
+       <div class="numbertext">3 / 5</div>
+        <img src="lavaratory header.png" class="responsive" alt="lavaratory header"> 
+         <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> From Office Interiors, Bedroom Interiors, Kitchen Interiors, Vanities and MORE!  </span> </p> </div>
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">4 / 5</div>
+          <img src="closet header.png" class="responsive" alt="closet header"> 
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Our primary programs usually involves in site production that emphasizes on the highest quality design.  </span> </p> </div>
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">5 / 5</div>
+         <img src="reception header.png" class="responsive" alt="reception header">
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein we incorporate the BELQ standards: B-eauty, E-legance, L-ifestyle & Q-uality to your homes! </span> </p> </div> 
+		</div>
+	  </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  
+}
+  </script>
+</center>
+
+
+<center>
+	<br> <br> <br> <h1> SCHEMATIC DESIGN PHASE </h1> <br>
+	<p style="margin-left: 40px; margin-right: 40px;">Schematic design is the first phase.  In this step, we here at BELQ Enterprise get the chance to have a conversasion with the client to determine the 
+		project requirements and their desired goals. </p>
+</center> 
+
+
+<div class="row">
+		<div class="column">
+				<img src="client.png" width=200; alt="client consultation icon"; style="margin-left:25%;"> <br>
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h2 style="padding-top:40px;"> CLIENT CONSULTATION  </h2>
+					</div>
+						<div class="flip-card-back">
+							<p class="solid"> Consulting with an interior designer is a key step in creating the modular home of your dreams. This phase of a project is approach differently by each designer. 
+						  Here at BELQ Enterprise, we take on a unique approach which would allows us to provide innovation to the client's needs.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="column">
+				<img src="inventory.png" width=200; alt="furniture inventory icon"; style="margin-left:25%;"> <br>
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h2 style="padding-top:40px;"> FURNITURE INVENTORY  </h2>
+					</div>
+						<div class="flip-card-back">
+							<p class="solid"> A furniture inventory is an important part of the successful result of the planning of new or renewed premises. BELQ Enterprise maps, identifies and lists all the items of 
+					furniture in use and determine the best solution for them, which can even lengthen the furniture lifecycle. </p>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="column">
+			<img src="gathering.png" width=200; alt="Information Gathering and familiarizationicon"; style="margin-left:25%;"> <br>	
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h2 style="padding-top:40px;">  INFORMATION GATHERING and FAMILIARIZATION </h2>
+					</div>
+						<div class="flip-card-back">
+							<p class="solid"> In order for us to effectively define and create a interior concept for our clients we need to immerse ourselves into the business and understand: its mission, vision, target markets, 
+							culture, competitive edge, strengths and weaknesses, marketing strategies, aim, challenges and aspirations for the future.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<br> <br> <br>
+
+<section style="background-image: url('typing.gif'); background-repeat: no-repeat; background-size: cover; padding: 8%; ">
+<center>
+    <h1 style="color:#FFFFFF;"> QUESTIONS </h1>
+	<p style="color:#FFFFFF;"> Have a Question for us? Click the button below, and we will try to get in touch with you. </p> <br>
+	<a href ="contact.html"> <button class="button1">  <h4> Go here → </h4> </button> </a> <br> <br> <br> 
+</center>
+</section>
+
+<br> <br> <br>
+
+<center>
+	<br> <br> <br> <h1> SCHEMATIC DESIGN PHASE </h1> <br>
+	<p style="margin-left: 40px; margin-right: 40px;"> Here at BELQ Enterprise, we usually start with rough study drawings that illustrate the basic concepts of the customer's design.  
+	We would often includes spatial relationships as well as basic scale and forms that the owner might desire.  </p>
+</center> 
+
+<div class="row">
+		<div class="column">
+				<img src="measurement.png" width=200; alt="site measurement and verification icon"; style="margin-left:25%;"> <br>
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h2 style="padding-top:40px;"> SITE MEASUREMENT and VERIFICATION  </h2>
+					</div>
+						<div class="flip-card-back">
+							<p class="solid"> <br> Through this stage, we would be going through the construction stages by completing field verification and taking exact measurements at the 
+							construction site, following construction activities closely with the drawings and specifications.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="column">
+				<img src="building design.png" width=200; alt="building design icon"; style="margin-left:25%;"> <br>
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h2 style="padding-top:40px;"> BUILDING DESIGN and PLAN   </h2>
+					</div>
+						<div class="flip-card-back">
+							<p class="solid"> <br> During this time, BELQ Enterprise will start working around with ideas like finishing details, furniture, color, equipment and related objects and spaces that their client's request </p>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="column">
+			<img src="relationship.png" width=200; alt="space programming/relationship/adjacencies icon"; style="margin-left:25%;"> <br>	
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h2 style="padding-top:40px;">SPACE PROGRAMMING/RELATIONSHIP </h2>
+					</div>
+						<div class="flip-card-back">
+							<p class="solid"> Space programming is a primary task during the schematic design process, to produce a geometric configuration of a 
+							space layout that is in accordance with the project's requirements.By nature, space programming is an iterative process 
+							that evolves according to the client's requirements.</p>
+						</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<br> <br> <br> <br> <br> 
+
+<footer style="background-color: #000000;">
+
+	<div class="footer">
+		<p> Designed by: Carlos, Dela Cruz, Reales, Vergara <br> Copyright © 2020 </p>	
+	</div>
+	
+</footer>
