@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<title>BELQ ENTERPRISE</title>
+</head>
+
+<body>
+<center>
+  <img src="logo transparent.png" width="400" height="150" alt="modular" usemap="#Modular">
+  <map name = "Modular">
+  <area shape = "rect" coords="0,0,558,204" href="homepage.html">
+  </map>
+
+<center>
+<div class="navbar">
+  <a href="homepage.html"> HOME </a>
+  
+  <div class="subnav">
+    <button class="subnavbtn">ABOUT US</button>
+    <div class= "subnav-content">
+      <a href = "companyhistory.html">COMPANY HISTORY</a>
+      <a href = "howWeWork.html">HOW WE WORK</a>
+    </div>
+   </div>
+ 
+	 <div class="subnav">
+	 <button class="subnavbtn">SERVICES</button>
+	 <div class= "subnav-content">
+	 <a href = "scope.html"> SCHEMATIC DESIGNS PHASE </a> <!-- SCOPE OF DESIGN -->
+	 <a href = "scope 2.html"> DESIGN DEVELOPMENT </a> <!-- SCOPE OF DESIGN -->
+	 </div>
+   </div>
+   
+  <div class="subnav">
+    <button class="subnavbtn"> PROJECTS </button>
+    <div class="subnav-content">
+      <a href = "kitchen.html">KITCHEN</a>
+      <a href = "bedroom.html">BEDROOM</a>
+      <a href = "vanity.html">VANITIES</a>
+      <a href = "entertainment.html">ENTERTAINMENT</a>
+    </div>
+  </div>
+  <div class="subnav">
+	<button class="subnavbtn">LAYOUTS</button>
+	<div class="subnav-content">
+		<a href = "2dlayouts.html">2D LAYOUTS</a>
+		<a href = "3dlayouts.html">3D LAYOUTS</a>
+	</div>
+  </div>
+    <a style="float:right;" href="contact.html">CONTACT US</a>
+</div>
+</center>
+
+  <div class="slideshow-container">
+  
+    <div class="mySlides fade">
+	  <div class="container">
+	   <div class="numbertext"> 1 / 5 </div>
+		 <img src="kitchen header.png" class="responsive" alt="Kitchen Header">
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein we incorporate the BELQ standards: B-eauty, E-legance, L-ifestyle & Q-uality to your homes! </span> </p> </div>
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	   <div class="numbertext">2 / 5</div>
+         <img src="kitchen header 2.png" class="responsive" alt="reception header"> 
+		  <div class="overlay">
+			<div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> We specialize on building for our customers their ideal innovative designs and styles. </span> </p> </div>
+		  </div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+	  <div class="container">
+       <div class="numbertext">3 / 5</div>
+        <img src="lavaratory header.png" class="responsive" alt="lavaratory header"> 
+         <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> From Office Interiors, Bedroom Interiors, Kitchen Interiors, Vanities and MORE!  </span> </p> </div>
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">4 / 5</div>
+          <img src="closet header.png" class="responsive" alt="closet header"> 
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Our primary programs usually involves in site production that emphasizes on the highest quality design.  </span> </p> </div>
+		</div>
+	  </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="container">
+	    <div class="numbertext">5 / 5</div>
+         <img src="reception header.png" class="responsive" alt="reception header">
+           <div class="overlay">
+		  <div class="text"> <p style="margin-left:80%;"> Welcome to BELQ MODULARS! <br> <span style="font-size:10px;"> Wherein we incorporate the BELQ standards: B-eauty, E-legance, L-ifestyle & Q-uality to your homes! </span> </p> </div> 
+		</div>
+	  </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+</center>
+
+<center>
+    <br> <br> <br> <h1>BEDROOM PROJECTS:</h1> <br>
+    <p>Below are some of the samples for our various bedroom projects:</p> <br>
+
+<table>
+    <tbody>
+        <tr>
+            <th scope = "col"><img src="Closet-1.jpg" alt="closet-1" id="f1" width="400" height="266"> <!--pic1-->
+            <div id="img1" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="1" id="img01">
+            </div>
+            <script>
+                var modal = document.getElementById('img1');
+                  var img = document.getElementById('f1');
+                  var modalImg = document.getElementById('img01');
+                  var captionText = document.getElementById("caption1");
+                  img.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </th>
+            <th scope = "col"><img src="Closet-2.jpg" alt="closet-2" id="f2" width="350" height="266"> <!--pic2-->
+            <div id="img2" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="2" id="img02">
+            </div>
+            <script>
+                var modal2 = document.getElementById('img2');
+                  var img2 = document.getElementById('f2');
+                  var modalImg2 = document.getElementById('img02');
+                  var captionText2 = document.getElementById("caption2");
+                  img2.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span2 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </th>
+            <th scope = "col"><img src="bedroom.jpg" alt="bedroom" id="f3" width="400" height="266"> <!--pic3-->
+            <div id="img3" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="3" id="img03">
+            </div>
+            <script>
+                var modal3 = document.getElementById('img3');
+                  var img3 = document.getElementById('f3');
+                  var modalImg3 = document.getElementById('img03');
+                  var captionText3 = document.getElementById("caption3");
+                  img3.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span3 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </th>
+        </tr>
+
+        <tr>
+            <td><img src="Bookshelves-1.jpg" alt="bookshelves" id="f4" width="400" height="266"> <!--pic4-->
+            <div id="img4" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="4" id="img04">
+            </div>
+            <script>
+                var modal4 = document.getElementById('img4');
+                  var img4 = document.getElementById('f4');
+                  var modalImg4 = document.getElementById('img04');
+                  var captionText2 = document.getElementById("caption4");
+                  img4.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span4 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </td>
+            <td><img src="Masters-Bedroom1.jpg" alt="masters bedroom" id="f5" width="390" height="266"> <!--pic5-->
+            <div id="img5" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="5" id="img05">
+            </div>
+            <script>
+                var modal5 = document.getElementById('img5');
+                  var img5 = document.getElementById('f5');
+                  var modalImg5 = document.getElementById('img05');
+                  var captionText5 = document.getElementById("caption5");
+                  img5.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span5 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </td> 
+            <td><img src="Vanity-1.jpg" alt="vanity-1" id="f6" width="400" height="266"> <!--pic6-->
+            <div id="img6" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="6" id="img06">
+            </div>
+            <script>
+                var modal6 = document.getElementById('img6');
+                  var img6 = document.getElementById('f6');
+                  var modalImg6 = document.getElementById('img06');
+                  var captionText6 = document.getElementById("caption6");
+                  img6.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span6 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="Sliding-Closet1.jpg" alt="sliding closet1" id="f7" width="400" height="266"> <!--pic7-->
+            <div id="img7" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="7" id="img07">
+            </div>
+            <script>
+                var modal7 = document.getElementById('img7');
+                  var img7 = document.getElementById('f7');
+                  var modalImg7 = document.getElementById('img07');
+                  var captionText7 = document.getElementById("caption7");
+                  img7.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span7 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                  }
+            </script>
+            </td>
+            <td><img src="Sliding-Closet-2.jpg" alt="sliding closet2" id="f8" width="400" height="266"> <!--pic8-->
+            <div id="img8" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="8" id="img08">
+            </div>
+            <script>
+                var modal8 = document.getElementById('img8');
+                  var img8 = document.getElementById('f8');
+                  var modalImg8 = document.getElementById('img08');
+                  var captionText8 = document.getElementById("caption8");
+                  img8.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span8 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                      }	
+            </script>
+            </td>
+            <td><img src="Closet-7.jpg" alt="closet-3" id="f9" width="400" height="266"> <!--pic9-->
+            <div id="img9" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="9" id="img09">
+            </div>
+            <script>
+                var modal9 = document.getElementById('img9');
+                  var img9 = document.getElementById('f9');
+                  var modalImg9 = document.getElementById('img09');
+                  var captionText9 = document.getElementById("caption9");
+                  img9.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span9 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                      }	
+            </script>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="bedroom-closet1.jpg" alt="bedroomcloset1" id="f10" width="400" height="266"> <!--pic10-->
+            <div id="img10" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="10" id="img010">
+            </div>
+            <script>
+                var modal10 = document.getElementById('img10');
+                  var img10 = document.getElementById('f10');
+                  var modalImg10 = document.getElementById('img10');
+                  var captionText10 = document.getElementById("caption10");
+                  img10.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span10 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                      }	
+            </script>
+            </td>
+            <td><img src="bedroom-closet2.jpg" alt="bedroomcloset2" id="f11" width="400" height="266"> <!--pic11-->
+            <div id="img11" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="11" id="img011">
+            </div>
+            <script>
+                var modal11 = document.getElementById('img11');
+                  var img11 = document.getElementById('f11');
+                  var modalImg11 = document.getElementById('img11');
+                  var captionText11 = document.getElementById("caption11");
+                  img11.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span11 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                      }	
+            </script>
+            </td>
+            <td><img src="bedroom-closet3.jpg" alt="bedroomcloset3" id="f12" width="400" height="266"> <!--pic12-->
+            <div id="img12" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" alt="12" id="img012">
+            </div>
+            <script>
+                var modal12 = document.getElementById('img12');
+                  var img12 = document.getElementById('f12');
+                  var modalImg12 = document.getElementById('img12');
+                  var captionText12 = document.getElementById("caption12");
+                  img12.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                    }
+                var span12 = document.getElementsByClassName("close")[0];
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                      }	
+            </script>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+<br> <br> <br> <br> <br> 
+
+<footer style="background-color: #000000;">
+
+	<div class="footer">
+		<p> Designed by: Carlos, Dela Cruz, Reales, Vergara <br> Copyright © 2020 </p>	
+	</div>
+	
+</footer>
+</body>
+</html>
